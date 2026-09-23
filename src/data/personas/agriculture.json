@@ -1,0 +1,17 @@
+{
+  "personaId": "agriculture",
+  "displayName": "personas.agriculture.displayName",
+  "iconKey": "farmer_crop",
+  "fields": {
+    "headline": "personas.agriculture.headline",
+    "cropAdvisory": "personas.agriculture.cropAdvisory",
+    "irrigationAlert": "personas.agriculture.irrigationAlert",
+    "pestRiskWarning": "personas.agriculture.pestRiskWarning",
+    "harvestWeatherWindow": "personas.agriculture.harvestWeatherWindow",
+    "soilMoistureTip": "personas.agriculture.soilMoistureTip"
+  },
+  "conditionLogic": {
+    "irrigationAlert": { "skipIfRainChanceAbove": 50 },
+    "pestRiskWarning": { "warnIfHumidityAbove": 70 }
+  }
+}

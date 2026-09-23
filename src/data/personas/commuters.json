@@ -1,0 +1,17 @@
+{
+  "personaId": "commuters",
+  "displayName": "personas.commuters.displayName",
+  "iconKey": "commuter_car",
+  "fields": {
+    "headline": "personas.commuters.headline",
+    "routeCondition": "personas.commuters.routeCondition",
+    "delayRisk": "personas.commuters.delayRisk",
+    "visibilityWarning": "personas.commuters.visibilityWarning",
+    "bestDepartureWindow": "personas.commuters.bestDepartureWindow",
+    "publicTransportAdvisory": "personas.commuters.publicTransportAdvisory"
+  },
+  "conditionLogic": {
+    "visibilityWarning": { "warnIfVisibilityBelowKm": 2 },
+    "delayRisk": { "warnIfRainChanceAbove": 40 }
+  }
+}

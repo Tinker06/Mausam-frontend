@@ -1,0 +1,17 @@
+{
+  "personaId": "eventPlanners",
+  "displayName": "personas.eventPlanners.displayName",
+  "iconKey": "event_tent",
+  "fields": {
+    "headline": "personas.eventPlanners.headline",
+    "outdoorEventRisk": "personas.eventPlanners.outdoorEventRisk",
+    "backupPlanSuggestion": "personas.eventPlanners.backupPlanSuggestion",
+    "windAdvisoryForSetup": "personas.eventPlanners.windAdvisoryForSetup",
+    "rainProbabilityForDate": "personas.eventPlanners.rainProbabilityForDate",
+    "guestComfortTip": "personas.eventPlanners.guestComfortTip"
+  },
+  "conditionLogic": {
+    "outdoorEventRisk": { "warnIfRainChanceAbove": 30 },
+    "windAdvisoryForSetup": { "warnIfWindSpeedAboveKmh": 20 }
+  }
+}

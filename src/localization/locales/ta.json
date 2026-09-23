@@ -1,0 +1,119 @@
+{
+"common": {
+  "appName": "MAUSAM",
+  "loading": "ஏற்றுகிறது...",
+  "retry": "மீண்டும் முயற்சிக்கவும்",
+  "ok": "சரி",
+  "cancel": "ரத்து செய்",
+  "seeMore": "மேலும் பார்க்க",
+  "today": "இன்று",
+  "tomorrow": "நாளை"
+},
+"weather": {
+  "temperature": "வெப்பநிலை",
+  "feelsLike": "உணரப்படும் வெப்பநிலை",
+  "humidity": "ஈரப்பதம்",
+  "windSpeed": "காற்றின் வேகம்",
+  "rainChance": "மழை வாய்ப்பு",
+  "uvIndex": "புற ஊதா குறியீடு",
+  "currentConditions": "தற்போதைய நிலை",
+  "hourlyForecast": "மணிநேர முன்னறிவிப்பு",
+  "weeklyForecast": "7-நாள் முன்னறிவிப்பு",
+  "sunrise": "சூரிய உதயம்",
+  "sunset": "சூரிய அஸ்தமனம்",
+  "airQuality": "காற்றின் தரம்",
+  "visibility": "தெரிவுநிலை",
+  "pressure": "காற்றழுத்தம்"
+},
+  "location": {
+    "currentLocation": "TODO",
+    "searchPlaceholder": "TODO",
+    "useMyLocation": "TODO",
+    "changeLocation": "TODO"
+  },
+  "alerts": {
+    "title": "TODO",
+    "severe": "TODO",
+    "flood": "TODO",
+    "heatwave": "TODO"
+  },
+  "personas": {
+    "parents": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "schoolAdvisory": "TODO",
+      "outdoorSafety": "TODO",
+      "clothing": "TODO",
+      "uvWarning": "TODO",
+      "schoolCommute": "TODO"
+    },
+    "agriculture": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "cropAdvisory": "TODO",
+      "irrigationAlert": "TODO",
+      "pestRiskWarning": "TODO",
+      "harvestWeatherWindow": "TODO",
+      "soilMoistureTip": "TODO"
+    },
+    "commuters": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "routeCondition": "TODO",
+      "delayRisk": "TODO",
+      "visibilityWarning": "TODO",
+      "bestDepartureWindow": "TODO",
+      "publicTransportAdvisory": "TODO"
+    },
+    "eventPlanners": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "outdoorEventRisk": "TODO",
+      "backupPlanSuggestion": "TODO",
+      "windAdvisoryForSetup": "TODO",
+      "rainProbabilityForDate": "TODO",
+      "guestComfortTip": "TODO"
+    }
+  },
+  "occupations": {
+    "fisherman": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "seaConditionWarning": "TODO",
+      "windSpeedAlert": "TODO",
+      "safeReturnTime": "TODO"
+    },
+    "vendor": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "stockProtectionTip": "TODO",
+      "footTrafficImpact": "TODO"
+    },
+    "deliveryWorker": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "roadHazardWarning": "TODO",
+      "safeRouteTip": "TODO"
+    },
+    "gardener": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "wateringAdvisory": "TODO",
+      "frostWarning": "TODO"
+    },
+    "student": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "commuteToSchoolAdvisory": "TODO",
+      "outdoorActivityWarning": "TODO"
+    },
+    "tourist": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "sightseeingAdvisory": "TODO",
+      "packingTip": "TODO"
+    }
+  },
+  "notifications": {},
+  "foreignerComparison": {}
+}

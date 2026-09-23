@@ -1,0 +1,119 @@
+{
+  "common": {
+    "appName": "MAUSAM",
+    "loading": "Loading...",
+    "retry": "Retry",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "seeMore": "See More",
+    "today": "Today",
+    "tomorrow": "Tomorrow"
+  },
+  "weather": {
+    "temperature": "Temperature",
+    "feelsLike": "Feels Like",
+    "humidity": "Humidity",
+    "windSpeed": "Wind Speed",
+    "rainChance": "Chance of Rain",
+    "uvIndex": "UV Index",
+    "currentConditions": "Current Conditions",
+    "hourlyForecast": "Hourly Forecast",
+    "weeklyForecast": "7-Day Forecast",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "airQuality": "Air Quality",
+    "visibility": "Visibility",
+    "pressure": "Pressure"
+  },
+  "location": {
+    "currentLocation": "Current Location",
+    "searchPlaceholder": "Search for a city",
+    "useMyLocation": "Use My Location",
+    "changeLocation": "Change Location"
+  },
+  "alerts": {
+    "title": "Weather Alert",
+    "severe": "Severe Weather Warning",
+    "flood": "Flood Warning",
+    "heatwave": "Heatwave Warning"
+  },
+  "personas": {
+    "parents": {
+      "displayName": "Parents",
+      "headline": "Heavy rain expected this afternoon",
+      "schoolAdvisory": "Check if your child's school has issued a weather advisory",
+      "outdoorSafety": "Not safe for outdoor play after 2 PM",
+      "clothing": "Send an umbrella and waterproof shoes",
+      "uvWarning": "High UV today — apply sunscreen before school",
+      "schoolCommute": "Leave 10 minutes early — wet roads may slow traffic"
+    },
+    "agriculture": {
+      "displayName": "Agriculture",
+      "headline": "Moderate rainfall expected over the next 48 hours",
+      "cropAdvisory": "Good conditions for sowing this week",
+      "irrigationAlert": "Skip irrigation today — natural rainfall is sufficient",
+      "pestRiskWarning": "Humid conditions may increase pest activity — inspect crops",
+      "harvestWeatherWindow": "Clear skies expected Thursday — ideal for harvesting",
+      "soilMoistureTip": "Soil moisture is adequate; avoid overwatering"
+    },
+    "commuters": {
+      "displayName": "Commuters",
+      "headline": "Waterlogging likely on low-lying routes this evening",
+      "routeCondition": "Main roads clear; underpasses may flood after 5 PM",
+      "delayRisk": "Expect 15-20 minute delays during evening rush hour",
+      "visibilityWarning": "Reduced visibility due to heavy rain — drive carefully",
+      "bestDepartureWindow": "Leave before 4 PM to avoid peak congestion",
+      "publicTransportAdvisory": "Bus routes on Level 2 flood alert may be rerouted"
+    },
+    "eventPlanners": {
+      "displayName": "Event Planners",
+      "headline": "30% chance of rain during your scheduled event window",
+      "outdoorEventRisk": "Moderate risk of rain disrupting outdoor seating",
+      "backupPlanSuggestion": "Have an indoor or covered backup ready by 3 PM",
+      "windAdvisoryForSetup": "Winds up to 25 km/h — secure tents and decorations",
+      "rainProbabilityForDate": "Rain probability rises to 60% after 6 PM",
+      "guestComfortTip": "Consider providing shade or umbrellas for guests"
+    }
+  },
+  "occupations": {
+    "fisherman": {
+      "displayName": "Fisherman",
+      "headline": "Rough sea conditions expected today",
+      "seaConditionWarning": "Wave heights up to 2.5m — avoid deep sea fishing",
+      "windSpeedAlert": "Coastal winds reaching 40 km/h by afternoon",
+      "safeReturnTime": "Return to shore before 3 PM for safety"
+    },
+    "vendor": {
+      "displayName": "Vendor",
+      "headline": "Rain expected between 2 PM and 6 PM",
+      "stockProtectionTip": "Cover perishable goods before the afternoon rain",
+      "footTrafficImpact": "Expect lower foot traffic during rain hours"
+    },
+    "deliveryWorker": {
+      "displayName": "Delivery Worker",
+      "headline": "Wet roads expected this afternoon",
+      "roadHazardWarning": "Slippery roads near flood-prone intersections",
+      "safeRouteTip": "Avoid underpasses after 4 PM; use main road routes"
+    },
+    "gardener": {
+      "displayName": "Gardener",
+      "headline": "Rainfall expected — adjust watering schedule",
+      "wateringAdvisory": "Skip watering today; natural rainfall is sufficient",
+      "frostWarning": "No frost risk expected this week"
+    },
+    "student": {
+      "displayName": "Student",
+      "headline": "Rain likely during school commute hours",
+      "commuteToSchoolAdvisory": "Carry an umbrella for your morning commute",
+      "outdoorActivityWarning": "Outdoor sports period may be moved indoors"
+    },
+    "tourist": {
+      "displayName": "Tourist",
+      "headline": "Partly cloudy with a chance of afternoon showers",
+      "sightseeingAdvisory": "Morning hours best for outdoor sightseeing",
+      "packingTip": "Pack a light raincoat or umbrella for the afternoon"
+    }
+  },
+  "notifications": {},
+  "foreignerComparison": {}
+}

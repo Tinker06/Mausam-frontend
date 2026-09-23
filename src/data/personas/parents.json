@@ -1,0 +1,17 @@
+{
+  "personaId": "parents",
+  "displayName": "personas.parents.displayName",
+  "iconKey": "parent_child",
+  "fields": {
+    "headline": "personas.parents.headline",
+    "schoolWeatherAdvisory": "personas.parents.schoolAdvisory",
+    "outdoorPlaySafety": "personas.parents.outdoorSafety",
+    "clothingRecommendation": "personas.parents.clothing",
+    "uvWarningForKids": "personas.parents.uvWarning",
+    "commuteToSchoolTip": "personas.parents.schoolCommute"
+  },
+  "conditionLogic": {
+    "outdoorPlaySafety": { "safeIfRainChanceBelow": 30, "safeIfTempBelow": 38 },
+    "uvWarningForKids": { "warnIfUvIndexAbove": 6 }
+  }
+}

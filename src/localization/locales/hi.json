@@ -1,0 +1,119 @@
+{
+"common": {
+  "appName": "MAUSAM",
+  "loading": "लोड हो रहा है...",
+  "retry": "पुनः प्रयास करें",
+  "ok": "ठीक है",
+  "cancel": "रद्द करें",
+  "seeMore": "और देखें",
+  "today": "आज",
+  "tomorrow": "कल"
+},
+"weather": {
+  "temperature": "तापमान",
+  "feelsLike": "महसूस होने वाला तापमान",
+  "humidity": "नमी",
+  "windSpeed": "हवा की गति",
+  "rainChance": "बारिश की संभावना",
+  "uvIndex": "यूवी सूचकांक",
+  "currentConditions": "वर्तमान स्थिति",
+  "hourlyForecast": "प्रति घंटा पूर्वानुमान",
+  "weeklyForecast": "7-दिन का पूर्वानुमान",
+  "sunrise": "सूर्योदय",
+  "sunset": "सूर्यास्त",
+  "airQuality": "वायु गुणवत्ता",
+  "visibility": "दृश्यता",
+  "pressure": "दबाव"
+},
+  "location": {
+    "currentLocation": "TODO",
+    "searchPlaceholder": "TODO",
+    "useMyLocation": "TODO",
+    "changeLocation": "TODO"
+  },
+  "alerts": {
+    "title": "TODO",
+    "severe": "TODO",
+    "flood": "TODO",
+    "heatwave": "TODO"
+  },
+  "personas": {
+    "parents": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "schoolAdvisory": "TODO",
+      "outdoorSafety": "TODO",
+      "clothing": "TODO",
+      "uvWarning": "TODO",
+      "schoolCommute": "TODO"
+    },
+    "agriculture": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "cropAdvisory": "TODO",
+      "irrigationAlert": "TODO",
+      "pestRiskWarning": "TODO",
+      "harvestWeatherWindow": "TODO",
+      "soilMoistureTip": "TODO"
+    },
+    "commuters": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "routeCondition": "TODO",
+      "delayRisk": "TODO",
+      "visibilityWarning": "TODO",
+      "bestDepartureWindow": "TODO",
+      "publicTransportAdvisory": "TODO"
+    },
+    "eventPlanners": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "outdoorEventRisk": "TODO",
+      "backupPlanSuggestion": "TODO",
+      "windAdvisoryForSetup": "TODO",
+      "rainProbabilityForDate": "TODO",
+      "guestComfortTip": "TODO"
+    }
+  },
+  "occupations": {
+    "fisherman": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "seaConditionWarning": "TODO",
+      "windSpeedAlert": "TODO",
+      "safeReturnTime": "TODO"
+    },
+    "vendor": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "stockProtectionTip": "TODO",
+      "footTrafficImpact": "TODO"
+    },
+    "deliveryWorker": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "roadHazardWarning": "TODO",
+      "safeRouteTip": "TODO"
+    },
+    "gardener": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "wateringAdvisory": "TODO",
+      "frostWarning": "TODO"
+    },
+    "student": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "commuteToSchoolAdvisory": "TODO",
+      "outdoorActivityWarning": "TODO"
+    },
+    "tourist": {
+      "displayName": "TODO",
+      "headline": "TODO",
+      "sightseeingAdvisory": "TODO",
+      "packingTip": "TODO"
+    }
+  },
+  "notifications": {},
+  "foreignerComparison": {}
+}
