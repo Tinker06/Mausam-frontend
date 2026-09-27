@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "188969925128",
+    "project_id": "mausam-homepage",
+    "storage_bucket": "mausam-homepage.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188969925128:android:f757117a44009da178afbd",
+        "android_client_info": {
+          "package_name": "com.tinkers.Mausamfrontend"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWTbCwWUohYonwBCcPB88Vq_k_NUy0FBk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

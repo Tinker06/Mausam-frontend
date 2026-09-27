@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import * as Notifications from 'expo-notifications';
+import * as Device from 'expo-device';
+
 import {
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
@@ -8,6 +10,11 @@ import {
   StatusBar,
   Pressable,
 } from 'react-native';
+
+import {
+  SafeAreaView,
+  SafeAreaProvider,
+} from 'react-native-safe-area-context';
 
 import WeatherCard from './components/WeatherInfo';
 import MetricCard from './components/MetricCard';
@@ -17,175 +24,222 @@ import PersonaCard from './components/PersonaCard';
 import ComparisonCard from './components/ComparisonCard';
 import ToastMessage from './components/ToastMessage';
 
+async function getFcmToken() {
+  if (!Device.isDevice) {
+    console.log('FCM TOKEN: Physical device required');
+    return;
+  }
+
+  const { status } = await Notifications.requestPermissionsAsync();
+
+  if (status !== 'granted') {
+    console.log('Notification permission not granted');
+    return;
+  }
+
+  const token = await Notifications.getDevicePushTokenAsync();
+
+  console.log('FCM TOKEN:', token.data);
+}
+
 export default function App() {
   const [toastVisible, setToastVisible] = useState(false);
 
+  useEffect(() => {
+    getFcmToken();
+  }, []);
+
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor="#071B35" />
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        <StatusBar barStyle="light-content" backgroundColor="#071B35" />
 
-      <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView showsVerticalScrollIndicator={false}>
 
-        {/* Header */}
-        <View style={styles.header}>
-          <View>
-            <Text style={styles.logo}>🌦 MAUSAM</Text>
-            <Text style={styles.subtitle}>Weather made personal</Text>
+          {/* Header */}
+          <View style={styles.header}>
+            <View>
+              <Text style={styles.logo}>🌦 MAUSAM</Text>
+              <Text style={styles.subtitle}>Weather made personal</Text>
+            </View>
+
+            <Pressable onPress={() => setToastVisible(true)}>
+              <Text style={styles.notification}>🔔</Text>
+            </Pressable>
           </View>
 
-          <Pressable onPress={() => setToastVisible(true)}>
-            <Text style={styles.notification}>🔔</Text>
-          </Pressable>
-        </View>
-
-        {/* Toast Notification */}
-        <ToastMessage
-          message="You're all caught up!"
-          visible={toastVisible}
-          onHide={() => setToastVisible(false)}
-        />
-
-        {/* Location */}
-        <View style={styles.location}>
-          <Text style={styles.locationText}>📍 Chennai, Tamil Nadu</Text>
-          <Text style={styles.updated}>Updated just now</Text>
-        </View>
-
-        {/* Main Weather Card */}
-        <WeatherCard />
-
-        {/* Weather Metrics */}
-        <Text style={styles.sectionTitle}>Today's Conditions</Text>
-
-        <View style={styles.metrics}>
-          <MetricCard
-            icon="💧"
-            title="Humidity"
-            value="68%"
+          {/* Toast Notification */}
+          <ToastMessage
+            message="You're all caught up!"
+            visible={toastVisible}
+            onHide={() => setToastVisible(false)}
           />
 
-          <MetricCard
-            icon="💨"
-            title="Wind Speed"
-            value="14 km/h"
+          {/* Location */}
+          <View style={styles.location}>
+            <Text style={styles.locationText}>
+              📍 Chennai, Tamil Nadu
+            </Text>
+
+            <Text style={styles.updated}>Updated just now</Text>
+          </View>
+
+          {/* Main Weather Card */}
+          <WeatherCard />
+
+          {/* Weather Metrics */}
+          <Text style={styles.sectionTitle}>Today's Conditions</Text>
+
+          <View style={styles.metrics}>
+            <MetricCard
+              icon="💧"
+              title="Humidity"
+              value="68%"
+            />
+
+            <MetricCard
+              icon="💨"
+              title="Wind Speed"
+              value="14 km/h"
+            />
+
+            <MetricCard
+              icon="🌧️"
+              title="Rain Chance"
+              value="30%"
+            />
+
+            <MetricCard
+              icon="☀️"
+              title="UV Index"
+              value="High"
+            />
+          </View>
+
+          {/* Weather Alert */}
+          <Text style={styles.sectionTitle}>Weather Alert</Text>
+
+          <AlertCard
+            title="Heat Advisory"
+            message="High temperatures expected today. Stay hydrated and avoid prolonged outdoor exposure during peak afternoon hours."
           />
 
-          <MetricCard
-            icon="🌧️"
-            title="Rain Chance"
-            value="30%"
-          />
-
-          <MetricCard
-            icon="☀️"
-            title="UV Index"
-            value="High"
-          />
-        </View>
-
-        {/* Weather Alert */}
-        <Text style={styles.sectionTitle}>Weather Alert</Text>
-
-        <AlertCard
-          title="Heat Advisory"
-          message="High temperatures expected today. Stay hydrated and avoid prolonged outdoor exposure during peak afternoon hours."
-        />
-
-        {/* Recommendations */}
-        <Text style={styles.sectionTitle}>Personalized For You</Text>
-
-        <RecommendationCard
-          icon="🎓"
-          title="Student Mode"
-          message="Good weather for studying outdoors. Find a comfortable shaded place and stay hydrated."
-        />
-
-        <RecommendationCard
-          icon="🌳"
-          title="Outdoor Activity"
-          message="It is hot outside. Avoid strenuous activities during peak afternoon hours."
-        />
-
-        {/* Choose Your Persona */}
-        <Text style={styles.sectionTitle}>Choose Your Persona</Text>
-
-        <PersonaCard
-          icon="🎓"
-          title="Student"
-          description="Get weather updates and study-friendly outdoor recommendations."
-        />
-
-        <PersonaCard
-          icon="🌾"
-          title="Farmer"
-          description="Receive weather insights to help plan your agricultural activities."
-        />
-
-        <PersonaCard
-          icon="✈️"
-          title="Traveller"
-          description="Explore weather conditions and plan your journeys with confidence."
-        />
-
-        {/* Weather Around the World */}
-        <Text style={styles.sectionTitle}>Weather Around the World</Text>
-
-        <ComparisonCard
-          localLocation="Chennai, India"
-          localTemperature="32°C"
-          visitorLocation="London, UK"
-          visitorTemperature="18°C"
-        />
-
-        {/* Hourly Forecast */}
-        <Text style={styles.sectionTitle}>Next Few Hours</Text>
-
-        <View style={styles.forecastCard}>
-          <View style={styles.forecastItem}>
-            <Text style={styles.forecastTime}>Now</Text>
-            <Text style={styles.forecastIcon}>🌤️</Text>
-            <Text style={styles.forecastTemp}>32°</Text>
-          </View>
-
-          <View style={styles.forecastItem}>
-            <Text style={styles.forecastTime}>12 PM</Text>
-            <Text style={styles.forecastIcon}>☀️</Text>
-            <Text style={styles.forecastTemp}>34°</Text>
-          </View>
-
-          <View style={styles.forecastItem}>
-            <Text style={styles.forecastTime}>3 PM</Text>
-            <Text style={styles.forecastIcon}>⛅</Text>
-            <Text style={styles.forecastTemp}>33°</Text>
-          </View>
-
-          <View style={styles.forecastItem}>
-            <Text style={styles.forecastTime}>6 PM</Text>
-            <Text style={styles.forecastIcon}>🌥️</Text>
-            <Text style={styles.forecastTemp}>30°</Text>
-          </View>
-        </View>
-
-        {/* Language Preview */}
-        <Text style={styles.sectionTitle}>Language Preview</Text>
-
-        <View style={styles.languageContainer}>
-          <Text style={styles.languageText}>
-            தமிழ்: வானிலை இன்று வெப்பமாக உள்ளது.
+          {/* Personalized Recommendations */}
+          <Text style={styles.sectionTitle}>
+            Personalized Recommendations
           </Text>
 
-          <Text style={styles.languageText}>
-            हिंदी: आज मौसम गर्म है।
+          <RecommendationCard
+            category="Health"
+            icon="❤️"
+            title="Stay Hydrated"
+            message="High temperature and UV conditions may cause discomfort. Drink water regularly and avoid prolonged outdoor exposure during peak afternoon hours."
+          />
+
+          <RecommendationCard
+            category="Fitness"
+            icon="🏃"
+            title="Choose the Right Time"
+            message="If you plan to exercise outdoors, prefer early morning or evening hours and avoid strenuous activity during peak heat."
+          />
+
+          <RecommendationCard
+            category="Beach"
+            icon="🏖️"
+            title="Beach Activity"
+            message="Warm conditions are expected. Stay hydrated, use sun protection, and take breaks from direct sunlight."
+          />
+
+          <RecommendationCard
+            category="Travel"
+            icon="✈️"
+            title="Plan Your Journey"
+            message="Check the latest weather conditions before travelling and keep water with you during outdoor travel."
+          />
+
+          {/* Choose Your Persona */}
+          <Text style={styles.sectionTitle}>Choose Your Persona</Text>
+
+          <PersonaCard
+            icon="🎓"
+            title="Student"
+            description="Get weather updates and study-friendly outdoor recommendations."
+          />
+
+          <PersonaCard
+            icon="🌾"
+            title="Farmer"
+            description="Receive weather insights to help plan your agricultural activities."
+          />
+
+          <PersonaCard
+            icon="✈️"
+            title="Traveller"
+            description="Explore weather conditions and plan your journeys with confidence."
+          />
+
+          {/* Weather Around the World */}
+          <Text style={styles.sectionTitle}>
+            Weather Around the World
           </Text>
-        </View>
 
-        {/* Footer */}
-        <Text style={styles.footer}>
-          MAUSAM • Weather insights for everyone
-        </Text>
+          <ComparisonCard
+            localLocation="Chennai, India"
+            localTemperature="32°C"
+            visitorLocation="London, UK"
+            visitorTemperature="18°C"
+          />
 
-      </ScrollView>
-    </SafeAreaView>
+          {/* Hourly Forecast */}
+          <Text style={styles.sectionTitle}>Next Few Hours</Text>
+
+          <View style={styles.forecastCard}>
+            <View style={styles.forecastItem}>
+              <Text style={styles.forecastTime}>Now</Text>
+              <Text style={styles.forecastIcon}>🌤️</Text>
+              <Text style={styles.forecastTemp}>32°</Text>
+            </View>
+
+            <View style={styles.forecastItem}>
+              <Text style={styles.forecastTime}>12 PM</Text>
+              <Text style={styles.forecastIcon}>☀️</Text>
+              <Text style={styles.forecastTemp}>34°</Text>
+            </View>
+
+            <View style={styles.forecastItem}>
+              <Text style={styles.forecastTime}>3 PM</Text>
+              <Text style={styles.forecastIcon}>⛅</Text>
+              <Text style={styles.forecastTemp}>33°</Text>
+            </View>
+
+            <View style={styles.forecastItem}>
+              <Text style={styles.forecastTime}>6 PM</Text>
+              <Text style={styles.forecastIcon}>🌥️</Text>
+              <Text style={styles.forecastTemp}>30°</Text>
+            </View>
+          </View>
+
+          {/* Language Preview */}
+          <Text style={styles.sectionTitle}>Language Preview</Text>
+
+          <View style={styles.languageContainer}>
+            <Text style={styles.languageText}>
+              தமிழ்: வானிலை இன்று வெப்பமாக உள்ளது.
+            </Text>
+
+            <Text style={styles.languageText}>
+              हिंदी: आज मौसम गर्म है।
+            </Text>
+          </View>
+
+          {/* Footer */}
+          <Text style={styles.footer}>
+            MAUSAM • Weather insights for everyone
+          </Text>
+
+        </ScrollView>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 

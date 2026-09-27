@@ -5,15 +5,21 @@ type RecommendationCardProps = {
   icon: string;
   title: string;
   message: string;
+  category?: string;
 };
 
 export default function RecommendationCard({
   icon,
   title,
   message,
+  category,
 }: RecommendationCardProps) {
   return (
     <View style={styles.card}>
+      {category ? (
+        <Text style={styles.category}>{category}</Text>
+      ) : null}
+
       <View style={styles.header}>
         <Text style={styles.icon}>{icon}</Text>
         <Text style={styles.title}>{title}</Text>
@@ -33,20 +39,33 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#254563',
   },
+
+  category: {
+    color: '#7DD3FC',
+    fontSize: 11,
+    fontWeight: 'bold',
+    marginBottom: 8,
+    textTransform: 'uppercase',
+  },
+
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,
   },
+
   icon: {
     fontSize: 23,
     marginRight: 10,
   },
+
   title: {
     color: '#FFFFFF',
     fontSize: 16,
     fontWeight: 'bold',
+    flex: 1,
   },
+
   message: {
     color: '#C4D5E8',
     fontSize: 14,
