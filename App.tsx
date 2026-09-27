@@ -20,7 +20,7 @@ import WeatherCard from './components/WeatherInfo';
 import MetricCard from './components/MetricCard';
 import AlertCard from './components/AlertCard';
 import RecommendationCard from './components/RecommendationCard';
-import PersonaCard from './components/PersonaCard';
+import PersonaCard, { Persona } from './components/PersonaCard';
 import ComparisonCard from './components/ComparisonCard';
 import ToastMessage from './components/ToastMessage';
 
@@ -45,9 +45,54 @@ async function getFcmToken() {
 export default function App() {
   const [toastVisible, setToastVisible] = useState(false);
 
+  const [selectedPersona, setSelectedPersona] = useState('parents');
+
+  const personas: Persona[] = [
+    {
+      id: 'parents',
+      name: 'Parents',
+      icon: '👨‍👩‍👧‍👦',
+      description:
+        'Weather updates and safety information for family and children.',
+      weatherMessage:
+        'Stay updated on weather conditions and safety alerts for your family.',
+    },
+    {
+      id: 'agriculture',
+      name: 'Agriculture',
+      icon: '🌾',
+      description:
+        'Weather insights to help with farming and crop-related decisions.',
+      weatherMessage:
+        'Check rainfall, temperature, humidity, and other weather conditions before planning farm activities.',
+    },
+    {
+      id: 'commuters',
+      name: 'Commuters',
+      icon: '🚗',
+      description:
+        'Weather and travel conditions for safer daily commuting.',
+      weatherMessage:
+        'Check rain, heat, wind, and other conditions before starting your journey.',
+    },
+    {
+      id: 'events',
+      name: 'Event Planners',
+      icon: '🎪',
+      description:
+        'Weather information to help plan and manage outdoor events.',
+      weatherMessage:
+        'Monitor upcoming weather conditions to plan outdoor events safely.',
+    },
+  ];
+
   useEffect(() => {
     getFcmToken();
   }, []);
+
+  const selectedPersonaData = personas.find(
+    (persona) => persona.id === selectedPersona
+  );
 
   return (
     <SafeAreaProvider>
@@ -157,26 +202,27 @@ export default function App() {
             message="Check the latest weather conditions before travelling and keep water with you during outdoor travel."
           />
 
-          {/* Choose Your Persona */}
-          <Text style={styles.sectionTitle}>Choose Your Persona</Text>
-
+          {/* Universal Occupation Personas */}
           <PersonaCard
-            icon="🎓"
-            title="Student"
-            description="Get weather updates and study-friendly outdoor recommendations."
+            personas={personas}
+            selectedPersona={selectedPersona}
+            onSelectPersona={(persona) =>
+              setSelectedPersona(persona.id)
+            }
           />
 
-          <PersonaCard
-            icon="🌾"
-            title="Farmer"
-            description="Receive weather insights to help plan your agricultural activities."
-          />
+          {/* Selected Persona Weather Message */}
+          {selectedPersonaData && (
+            <View style={styles.personaMessage}>
+              <Text style={styles.personaMessageTitle}>
+                {selectedPersonaData.icon} {selectedPersonaData.name} Weather Insight
+              </Text>
 
-          <PersonaCard
-            icon="✈️"
-            title="Traveller"
-            description="Explore weather conditions and plan your journeys with confidence."
-          />
+              <Text style={styles.personaMessageText}>
+                {selectedPersonaData.weatherMessage}
+              </Text>
+            </View>
+          )}
 
           {/* Weather Around the World */}
           <Text style={styles.sectionTitle}>
@@ -314,6 +360,29 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     gap: 12,
+  },
+
+  personaMessage: {
+    marginHorizontal: 20,
+    marginTop: 4,
+    padding: 16,
+    borderRadius: 16,
+    backgroundColor: '#102B48',
+    borderWidth: 1,
+    borderColor: '#254563',
+  },
+
+  personaMessageTitle: {
+    color: '#55C2FF',
+    fontSize: 15,
+    fontWeight: 'bold',
+    marginBottom: 8,
+  },
+
+  personaMessageText: {
+    color: '#C4D5E8',
+    fontSize: 13,
+    lineHeight: 20,
   },
 
   forecastCard: {
