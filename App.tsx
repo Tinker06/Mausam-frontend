@@ -215,7 +215,8 @@ export default function App() {
           {selectedPersonaData && (
             <View style={styles.personaMessage}>
               <Text style={styles.personaMessageTitle}>
-                {selectedPersonaData.icon} {selectedPersonaData.name} Weather Insight
+                {selectedPersonaData.icon}{' '}
+                {selectedPersonaData.name} Weather Insight
               </Text>
 
               <Text style={styles.personaMessageText}>
@@ -232,8 +233,6 @@ export default function App() {
           <ComparisonCard
             localLocation="Chennai, India"
             localTemperature="32°C"
-            visitorLocation="London, UK"
-            visitorTemperature="18°C"
           />
 
           {/* Hourly Forecast */}
