@@ -28,5 +28,7 @@ i18n
     },
     compatibilityJSON: 'v4',
   });
-
+export const changeLanguage = (lang: 'en' | 'ta' | 'hi') => {
+  i18n.changeLanguage(lang);
+};
 export default i18n;
