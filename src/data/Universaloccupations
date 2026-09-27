@@ -1,8 +1,0 @@
-[
-  { "id": "fisherman", "emoji": "🎣", "icon": "sailing", "labelKey": "occupations.fishermanLabel", "descKey": "occupations.fishermanDesc", "messageKey": "occupations.fisherman" },
-  { "id": "vendor", "emoji": "🛒", "icon": "storefront", "labelKey": "occupations.vendorLabel", "descKey": "occupations.vendorDesc", "messageKey": "occupations.vendor" },
-  { "id": "deliveryWorker", "emoji": "🛵", "icon": "two-wheeler", "labelKey": "occupations.deliveryWorkerLabel", "descKey": "occupations.deliveryWorkerDesc", "messageKey": "occupations.deliveryWorker" },
-  { "id": "gardener", "emoji": "🌱", "icon": "grass", "labelKey": "occupations.gardenerLabel", "descKey": "occupations.gardenerDesc", "messageKey": "occupations.gardener" },
-  { "id": "student", "emoji": "🎒", "icon": "school", "labelKey": "occupations.studentLabel", "descKey": "occupations.studentDesc", "messageKey": "occupations.student" },
-  { "id": "tourist", "emoji": "📷", "icon": "camera-alt", "labelKey": "occupations.touristLabel", "descKey": "occupations.touristDesc", "messageKey": "occupations.tourist" }
-]
