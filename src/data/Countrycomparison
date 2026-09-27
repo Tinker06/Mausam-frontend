@@ -1,47 +1,47 @@
 [
   {
-    "countryCode": "UK",
-    "countryName": "United Kingdom",
+    "countryCode": "uk",
+    "flagEmoji": "🇬🇧",
+    "basePath": "foreignerComparison.countries.uk",
     "avgSummerTempC": 21,
     "avgWinterTempC": 5,
     "monsoonEquivalent": "No monsoon season; rainfall is spread fairly evenly across the year.",
-    "extremeWeatherNote": "Rare heatwaves above 30°C, becoming more frequent in recent years.",
-    "comparisonToChennai": "Chennai's summer heat (35–40°C) is far more intense than the UK's warmest days."
+    "extremeWeatherNote": "Rare heatwaves above 30°C, becoming more frequent in recent years."
   },
   {
-    "countryCode": "US",
-    "countryName": "United States",
+    "countryCode": "us",
+    "flagEmoji": "🇺🇸",
+    "basePath": "foreignerComparison.countries.us",
     "avgSummerTempC": 25,
     "avgWinterTempC": 2,
     "monsoonEquivalent": "The Southwest has a summer 'monsoon' with short, intense storms; most of the US has no true monsoon.",
-    "extremeWeatherNote": "Hurricanes affect the Gulf and East Coasts from June to November.",
-    "comparisonToChennai": "Chennai's cyclone season (Oct–Dec) is comparable in intensity to the US Gulf Coast hurricane season."
+    "extremeWeatherNote": "Hurricanes affect the Gulf and East Coasts from June to November."
   },
   {
-    "countryCode": "CA",
-    "countryName": "Canada",
+    "countryCode": "ca",
+    "flagEmoji": "🇨🇦",
+    "basePath": "foreignerComparison.countries.ca",
     "avgSummerTempC": 22,
     "avgWinterTempC": -10,
     "monsoonEquivalent": "No monsoon season.",
-    "extremeWeatherNote": "Harsh winters with heavy snowfall and sub-zero temperatures for months.",
-    "comparisonToChennai": "Chennai never sees snow or freezing temperatures, unlike most of Canada's winter."
+    "extremeWeatherNote": "Harsh winters with heavy snowfall and sub-zero temperatures for months."
   },
   {
-    "countryCode": "JP",
-    "countryName": "Japan",
+    "countryCode": "jp",
+    "flagEmoji": "🇯🇵",
+    "basePath": "foreignerComparison.countries.jp",
     "avgSummerTempC": 27,
     "avgWinterTempC": 5,
     "monsoonEquivalent": "Has a rainy season called 'tsuyu' in June–July, similar timing to India's monsoon.",
-    "extremeWeatherNote": "Typhoons regularly hit Japan from August to October.",
-    "comparisonToChennai": "Japan's typhoon season closely parallels Chennai's Northeast monsoon and cyclone risk."
+    "extremeWeatherNote": "Typhoons regularly hit Japan from August to October."
   },
   {
-    "countryCode": "AU",
-    "countryName": "Australia",
+    "countryCode": "au",
+    "flagEmoji": "🇦🇺",
+    "basePath": "foreignerComparison.countries.au",
     "avgSummerTempC": 29,
     "avgWinterTempC": 15,
     "monsoonEquivalent": "Northern Australia has a wet/dry monsoon season similar to India's.",
-    "extremeWeatherNote": "Bushfires are a major risk during hot, dry summers.",
-    "comparisonToChennai": "Australia's seasons are reversed — their summer (Dec–Feb) matches Chennai's cooler months."
+    "extremeWeatherNote": "Bushfires are a major risk during hot, dry summers."
   }
 ]
