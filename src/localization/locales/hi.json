@@ -1,150 +1,150 @@
 {
-"common": {
-  "appName": "MAUSAM",
-  "loading": "लोड हो रहा है...",
-  "retry": "पुनः प्रयास करें",
-  "ok": "ठीक है",
-  "cancel": "रद्द करें",
-  "seeMore": "और देखें",
-  "today": "आज",
-  "tomorrow": "कल"
-},
-"weather": {
-  "temperature": "तापमान",
-  "feelsLike": "महसूस होने वाला तापमान",
-  "humidity": "नमी",
-  "windSpeed": "हवा की गति",
-  "rainChance": "बारिश की संभावना",
-  "uvIndex": "यूवी सूचकांक",
-  "currentConditions": "वर्तमान स्थिति",
-  "hourlyForecast": "प्रति घंटा पूर्वानुमान",
-  "weeklyForecast": "7-दिन का पूर्वानुमान",
-  "sunrise": "सूर्योदय",
-  "sunset": "सूर्यास्त",
-  "airQuality": "वायु गुणवत्ता",
-  "visibility": "दृश्यता",
-  "pressure": "दबाव"
-},
+  "common": {
+    "appName": "MAUSAM",
+    "loading": "लोड हो रहा है...",
+    "retry": "पुनः प्रयास करें",
+    "ok": "ठीक है",
+    "cancel": "रद्द करें",
+    "seeMore": "और देखें",
+    "today": "आज",
+    "tomorrow": "कल"
+  },
+  "weather": {
+    "temperature": "तापमान",
+    "feelsLike": "महसूस होने वाला तापमान",
+    "humidity": "नमी",
+    "windSpeed": "हवा की गति",
+    "rainChance": "बारिश की संभावना",
+    "uvIndex": "यूवी सूचकांक",
+    "currentConditions": "वर्तमान स्थिति",
+    "hourlyForecast": "प्रति घंटा पूर्वानुमान",
+    "weeklyForecast": "7-दिन का पूर्वानुमान",
+    "sunrise": "सूर्योदय",
+    "sunset": "सूर्यास्त",
+    "airQuality": "वायु गुणवत्ता",
+    "visibility": "दृश्यता",
+    "pressure": "दबाव"
+  },
   "location": {
-    "currentLocation": "TODO",
-    "searchPlaceholder": "TODO",
-    "useMyLocation": "TODO",
-    "changeLocation": "TODO"
+    "currentLocation": "वर्तमान स्थान",
+    "searchPlaceholder": "शहर खोजें",
+    "useMyLocation": "मेरा स्थान उपयोग करें",
+    "changeLocation": "स्थान बदलें"
   },
   "alerts": {
-    "title": "TODO",
-    "severe": "TODO",
-    "flood": "TODO",
-    "heatwave": "TODO"
+    "title": "मौसम चेतावनी",
+    "severe": "गंभीर मौसम चेतावनी",
+    "flood": "बाढ़ चेतावनी",
+    "heatwave": "लू चेतावनी"
   },
   "personas": {
     "parents": {
-      "displayName": "TODO",
-      "headline": "TODO",
-      "schoolAdvisory": "TODO",
-      "outdoorSafety": "TODO",
-      "clothing": "TODO",
-      "uvWarning": "TODO",
-      "schoolCommute": "TODO"
+      "displayName": "माता-पिता",
+      "headline": "आज दोपहर भारी बारिश की संभावना है",
+      "schoolAdvisory": "देखें कि क्या आपके बच्चे के स्कूल ने मौसम सलाह जारी की है",
+      "outdoorSafety": "दोपहर 2 बजे के बाद बाहर खेलना सुरक्षित नहीं है",
+      "clothing": "छाता और वाटरप्रूफ जूते साथ भेजें",
+      "uvWarning": "आज यूवी स्तर अधिक है — स्कूल जाने से पहले सनस्क्रीन लगाएं",
+      "schoolCommute": "10 मिनट पहले निकलें — गीली सड़कों से ट्रैफिक धीमा हो सकता है"
     },
     "agriculture": {
-      "displayName": "TODO",
-      "headline": "TODO",
-      "cropAdvisory": "TODO",
-      "irrigationAlert": "TODO",
-      "pestRiskWarning": "TODO",
-      "harvestWeatherWindow": "TODO",
-      "soilMoistureTip": "TODO"
+      "displayName": "कृषि",
+      "headline": "अगले 48 घंटों में मध्यम बारिश की संभावना है",
+      "cropAdvisory": "इस सप्ताह बुवाई के लिए अच्छी स्थिति है",
+      "irrigationAlert": "आज सिंचाई न करें — प्राकृतिक बारिश पर्याप्त है",
+      "pestRiskWarning": "नमी अधिक होने से कीट गतिविधि बढ़ सकती है — फसलों की जांच करें",
+      "harvestWeatherWindow": "गुरुवार को साफ़ आसमान की उम्मीद है — कटाई के लिए उपयुक्त",
+      "soilMoistureTip": "मिट्टी की नमी पर्याप्त है; अधिक पानी देने से बचें"
     },
     "commuters": {
-      "displayName": "TODO",
-      "headline": "TODO",
-      "routeCondition": "TODO",
-      "delayRisk": "TODO",
-      "visibilityWarning": "TODO",
-      "bestDepartureWindow": "TODO",
-      "publicTransportAdvisory": "TODO"
+      "displayName": "यात्री",
+      "headline": "आज शाम निचले मार्गों पर जलभराव की संभावना है",
+      "routeCondition": "मुख्य सड़कें साफ़ हैं; शाम 5 बजे के बाद अंडरपास में पानी भर सकता है",
+      "delayRisk": "शाम के व्यस्त समय में 15-20 मिनट की देरी की उम्मीद करें",
+      "visibilityWarning": "भारी बारिश के कारण दृश्यता कम — सावधानी से गाड़ी चलाएं",
+      "bestDepartureWindow": "अधिक भीड़ से बचने के लिए शाम 4 बजे से पहले निकलें",
+      "publicTransportAdvisory": "लेवल 2 बाढ़ चेतावनी वाले बस मार्गों को डायवर्ट किया जा सकता है"
     },
     "eventPlanners": {
-      "displayName": "TODO",
-      "headline": "TODO",
-      "outdoorEventRisk": "TODO",
-      "backupPlanSuggestion": "TODO",
-      "windAdvisoryForSetup": "TODO",
-      "rainProbabilityForDate": "TODO",
-      "guestComfortTip": "TODO"
+      "displayName": "इवेंट प्लानर",
+      "headline": "आपके निर्धारित आयोजन के समय 30% बारिश की संभावना है",
+      "outdoorEventRisk": "बारिश से बाहरी बैठने की व्यवस्था बाधित होने का मध्यम जोखिम है",
+      "backupPlanSuggestion": "शाम 3 बजे तक इनडोर या ढकी हुई वैकल्पिक व्यवस्था तैयार रखें",
+      "windAdvisoryForSetup": "हवा की गति 25 किमी/घंटा तक — टेंट और सजावट सुरक्षित करें",
+      "rainProbabilityForDate": "शाम 6 बजे के बाद बारिश की संभावना 60% तक बढ़ जाती है",
+      "guestComfortTip": "मेहमानों के लिए छाया या छाते उपलब्ध कराने पर विचार करें"
     }
   },
   "occupations": {
     "fisherman": {
-      "displayName": "TODO",
-      "headline": "TODO",
-      "seaConditionWarning": "TODO",
-      "windSpeedAlert": "TODO",
-      "safeReturnTime": "TODO"
+      "displayName": "मछुआरा",
+      "headline": "आज समुद्र की स्थिति खराब रहने की संभावना है",
+      "seaConditionWarning": "लहरों की ऊंचाई 2.5 मीटर तक — गहरे समुद्र में मछली पकड़ने से बचें",
+      "windSpeedAlert": "दोपहर तक तटीय हवाएं 40 किमी/घंटा तक पहुंच सकती हैं",
+      "safeReturnTime": "सुरक्षा के लिए दोपहर 3 बजे से पहले किनारे लौट आएं"
     },
     "vendor": {
-      "displayName": "TODO",
-      "headline": "TODO",
-      "stockProtectionTip": "TODO",
-      "footTrafficImpact": "TODO"
+      "displayName": "विक्रेता",
+      "headline": "दोपहर 2 से शाम 6 बजे के बीच बारिश की संभावना है",
+      "stockProtectionTip": "दोपहर की बारिश से पहले जल्दी खराब होने वाले सामान को ढक दें",
+      "footTrafficImpact": "बारिश के दौरान ग्राहकों की आवाजाही कम रहने की उम्मीद करें"
     },
     "deliveryWorker": {
-      "displayName": "TODO",
-      "headline": "TODO",
-      "roadHazardWarning": "TODO",
-      "safeRouteTip": "TODO"
+      "displayName": "डिलीवरी वर्कर",
+      "headline": "आज दोपहर गीली सड़कों की संभावना है",
+      "roadHazardWarning": "बाढ़-प्रवण चौराहों के पास सड़कें फिसलन भरी हो सकती हैं",
+      "safeRouteTip": "शाम 4 बजे के बाद अंडरपास से बचें; मुख्य सड़क मार्गों का उपयोग करें"
     },
     "gardener": {
-      "displayName": "TODO",
-      "headline": "TODO",
-      "wateringAdvisory": "TODO",
-      "frostWarning": "TODO"
+      "displayName": "माली",
+      "headline": "बारिश की संभावना है — पानी देने का समय समायोजित करें",
+      "wateringAdvisory": "आज पानी न दें; प्राकृतिक बारिश पर्याप्त है",
+      "frostWarning": "इस सप्ताह पाला पड़ने का कोई खतरा नहीं है"
     },
     "student": {
-      "displayName": "TODO",
-      "headline": "TODO",
-      "commuteToSchoolAdvisory": "TODO",
-      "outdoorActivityWarning": "TODO"
+      "displayName": "छात्र",
+      "headline": "स्कूल जाने के समय बारिश होने की संभावना है",
+      "commuteToSchoolAdvisory": "सुबह की यात्रा के लिए छाता साथ रखें",
+      "outdoorActivityWarning": "बाहरी खेल अवधि को अंदर स्थानांतरित किया जा सकता है"
     },
     "tourist": {
-      "displayName": "TODO",
-      "headline": "TODO",
-      "sightseeingAdvisory": "TODO",
-      "packingTip": "TODO"
+      "displayName": "पर्यटक",
+      "headline": "आंशिक रूप से बादल छाए रहेंगे, दोपहर में बारिश की संभावना",
+      "sightseeingAdvisory": "बाहरी घूमने के लिए सुबह का समय सबसे अच्छा है",
+      "packingTip": "दोपहर के लिए हल्का रेनकोट या छाता साथ रखें"
     }
   },
   "notifications": {
-  "rain": {
-    "moderate": { "title": "Rain Alert", "body": "Moderate rain expected in your area. Carry an umbrella and allow extra travel time." },
-    "severe": { "title": "Severe Rain Warning", "body": "Heavy rainfall expected. Avoid low-lying areas and unnecessary travel." }
+    "rain": {
+      "moderate": { "title": "बारिश चेतावनी", "body": "आपके क्षेत्र में मध्यम बारिश की संभावना है। छाता साथ रखें और यात्रा के लिए अतिरिक्त समय रखें।" },
+      "severe": { "title": "गंभीर बारिश चेतावनी", "body": "भारी बारिश की संभावना है। निचले इलाकों और अनावश्यक यात्रा से बचें।" }
+    },
+    "storm": {
+      "moderate": { "title": "तूफ़ान चेतावनी", "body": "आपके क्षेत्र के पास एक तूफ़ान प्रणाली आ रही है। बाहर रखी ढीली वस्तुओं को सुरक्षित करें।" },
+      "severe": { "title": "गंभीर तूफ़ान चेतावनी", "body": "खतरनाक तूफ़ानी स्थिति की संभावना है। घर के अंदर रहें और खिड़कियों से दूर रहें।" }
+    },
+    "heat": {
+      "moderate": { "title": "गर्मी चेतावनी", "body": "तापमान सामान्य से अधिक बढ़ रहा है। पर्याप्त पानी पिएं और दोपहर की धूप में बाहर जाना सीमित करें।" },
+      "severe": { "title": "गंभीर लू चेतावनी", "body": "अत्यधिक गर्मी की संभावना है। सुबह 11 से शाम 4 बजे तक बाहरी गतिविधियों से बचें और बुज़ुर्गों का ध्यान रखें।" }
+    },
+    "marine": {
+      "moderate": { "title": "समुद्री चेतावनी", "body": "समुद्र में हलचल भरी स्थिति की संभावना है। छोटी नावों को सावधानी बरतनी चाहिए।" },
+      "severe": { "title": "गंभीर समुद्री चेतावनी", "body": "खतरनाक समुद्री स्थिति। मछली पकड़ने और नाव चलाने की गतिविधियों से दृढ़ता से बचने की सलाह दी जाती है।" }
+    }
   },
-  "storm": {
-    "moderate": { "title": "Storm Alert", "body": "A storm system is approaching your area. Secure loose outdoor items." },
-    "severe": { "title": "Severe Storm Warning", "body": "Dangerous storm conditions expected. Stay indoors and away from windows." }
-  },
-  "heat": {
-    "moderate": { "title": "Heat Alert", "body": "Temperatures are rising above normal. Stay hydrated and limit midday sun exposure." },
-    "severe": { "title": "Severe Heatwave Warning", "body": "Extreme heat expected. Avoid outdoor activity 11am–4pm and check on elderly neighbors." }
-  },
-  "marine": {
-    "moderate": { "title": "Marine Alert", "body": "Choppy sea conditions expected. Small boats should exercise caution." },
-    "severe": { "title": "Severe Marine Warning", "body": "Dangerous sea conditions. Fishing and boating activity strongly discouraged." }
+  "foreignerComparison": {
+    "title": "यह आपके गृह देश की जलवायु से कैसे तुलना करता है?",
+    "selectCountryPrompt": "अपना गृह देश चुनें",
+    "summerLabel": "औसत गर्मी",
+    "winterLabel": "औसत सर्दी",
+    "monsoonLabel": "मानसून के समकक्ष",
+    "extremeWeatherLabel": "चरम मौसम",
+    "countries": {
+      "uk": { "name": "यूनाइटेड किंगडम", "comparisonNote": "चेन्नई की गर्मी यूके के सबसे गर्म दिनों की तुलना में कहीं अधिक तीव्र है" },
+      "us": { "name": "संयुक्त राज्य अमेरिका", "comparisonNote": "चेन्नई का चक्रवात मौसम अमेरिका के गल्फ तट के तूफान मौसम के समान है" },
+      "ca": { "name": "कनाडा", "comparisonNote": "कनाडा की अधिकांश सर्दियों के विपरीत, चेन्नई में कभी बर्फ या हिमांक तापमान नहीं होता" },
+      "jp": { "name": "जापान", "comparisonNote": "जापान का टाइफून मौसम चेन्नई के उत्तर-पूर्व मानसून और चक्रवात जोखिम से काफी मिलता-जुलता है" },
+      "au": { "name": "ऑस्ट्रेलिया", "comparisonNote": "ऑस्ट्रेलिया के मौसम उलटे हैं — उनकी गर्मी चेन्नई के ठंडे महीनों से मेल खाती है" }
+    }
   }
-},
-"foreignerComparison": {
-  "title": "How does this compare to your home climate?",
-  "selectCountryPrompt": "Select your home country",
-  "summerLabel": "Average Summer",
-  "winterLabel": "Average Winter",
-  "monsoonLabel": "Monsoon Equivalent",
-  "extremeWeatherLabel": "Extreme Weather",
-  "countries": {
-    "uk": { "name": "United Kingdom", "comparisonNote": "Chennai's summer heat is far more intense than the UK's warmest days" },
-    "us": { "name": "United States", "comparisonNote": "Chennai's cyclone season is comparable to the US Gulf Coast hurricane season" },
-    "ca": { "name": "Canada", "comparisonNote": "Chennai never sees snow or freezing temperatures, unlike most of Canada's winter" },
-    "jp": { "name": "Japan", "comparisonNote": "Japan's typhoon season closely parallels Chennai's Northeast monsoon and cyclone risk" },
-    "au": { "name": "Australia", "comparisonNote": "Australia's seasons are reversed — their summer matches Chennai's cooler months" }
-  }
-}
 }
