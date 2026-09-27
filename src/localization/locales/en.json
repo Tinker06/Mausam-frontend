@@ -114,6 +114,37 @@
       "packingTip": "Pack a light raincoat or umbrella for the afternoon"
     }
   },
-  "notifications": {},
-  "foreignerComparison": {}
+  "notifications": {
+  "rain": {
+    "moderate": { "title": "Rain Alert", "body": "Moderate rain expected in your area. Carry an umbrella and allow extra travel time." },
+    "severe": { "title": "Severe Rain Warning", "body": "Heavy rainfall expected. Avoid low-lying areas and unnecessary travel." }
+  },
+  "storm": {
+    "moderate": { "title": "Storm Alert", "body": "A storm system is approaching your area. Secure loose outdoor items." },
+    "severe": { "title": "Severe Storm Warning", "body": "Dangerous storm conditions expected. Stay indoors and away from windows." }
+  },
+  "heat": {
+    "moderate": { "title": "Heat Alert", "body": "Temperatures are rising above normal. Stay hydrated and limit midday sun exposure." },
+    "severe": { "title": "Severe Heatwave Warning", "body": "Extreme heat expected. Avoid outdoor activity 11am–4pm and check on elderly neighbors." }
+  },
+  "marine": {
+    "moderate": { "title": "Marine Alert", "body": "Choppy sea conditions expected. Small boats should exercise caution." },
+    "severe": { "title": "Severe Marine Warning", "body": "Dangerous sea conditions. Fishing and boating activity strongly discouraged." }
+  }
+},
+"foreignerComparison": {
+  "title": "How does this compare to your home climate?",
+  "selectCountryPrompt": "Select your home country",
+  "summerLabel": "Average Summer",
+  "winterLabel": "Average Winter",
+  "monsoonLabel": "Monsoon Equivalent",
+  "extremeWeatherLabel": "Extreme Weather",
+  "countries": {
+    "uk": { "name": "United Kingdom", "comparisonNote": "Chennai's summer heat is far more intense than the UK's warmest days" },
+    "us": { "name": "United States", "comparisonNote": "Chennai's cyclone season is comparable to the US Gulf Coast hurricane season" },
+    "ca": { "name": "Canada", "comparisonNote": "Chennai never sees snow or freezing temperatures, unlike most of Canada's winter" },
+    "jp": { "name": "Japan", "comparisonNote": "Japan's typhoon season closely parallels Chennai's Northeast monsoon and cyclone risk" },
+    "au": { "name": "Australia", "comparisonNote": "Australia's seasons are reversed — their summer matches Chennai's cooler months" }
+  }
+}
 }
