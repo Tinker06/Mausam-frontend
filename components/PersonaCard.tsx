@@ -1,10 +1,9 @@
 import React from 'react';
 import {
-  ScrollView,
-  View,
-  Text,
   StyleSheet,
+  Text,
   TouchableOpacity,
+  View,
 } from 'react-native';
 
 export type Persona = {
@@ -28,177 +27,200 @@ export default function PersonaCard({
 }: PersonaCardProps) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Choose Your Weather Mode</Text>
+      {personas.map((persona) => {
+        const isSelected =
+          persona.id === selectedPersona;
 
-      <Text style={styles.subtitle}>
-        Get weather information relevant to your daily needs.
-      </Text>
-
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.scrollContent}
-      >
-        {personas.map((persona) => {
-          const selected = persona.id === selectedPersona;
-
-          return (
-            <TouchableOpacity
-              key={persona.id}
+        return (
+          <TouchableOpacity
+            key={persona.id}
+            activeOpacity={0.8}
+            onPress={() => onSelectPersona(persona)}
+            style={[
+              styles.card,
+              isSelected && styles.selectedCard,
+            ]}
+          >
+            {/* ICON */}
+            <View
               style={[
-                styles.card,
-                selected && styles.selectedCard,
+                styles.iconContainer,
+                isSelected &&
+                  styles.selectedIconContainer,
               ]}
-              onPress={() => onSelectPersona(persona)}
-              activeOpacity={0.8}
             >
-              <View
-                style={[
-                  styles.iconContainer,
-                  selected && styles.selectedIconContainer,
-                ]}
-              >
-                <Text style={styles.icon}>{persona.icon}</Text>
+              <Text style={styles.icon}>
+                {persona.icon}
+              </Text>
+            </View>
+
+            {/* CONTENT */}
+            <View style={styles.content}>
+              <View style={styles.titleRow}>
+                <Text style={styles.title}>
+                  {persona.name}
+                </Text>
+
+                {isSelected && (
+                  <View style={styles.activeBadge}>
+                    <Text style={styles.activeText}>
+                      ACTIVE
+                    </Text>
+                  </View>
+                )}
               </View>
 
-              <Text
-                style={[
-                  styles.name,
-                  selected && styles.selectedText,
-                ]}
-              >
-                {persona.name}
-              </Text>
-
-              <Text
-                numberOfLines={3}
-                style={styles.description}
-              >
+              <Text style={styles.description}>
                 {persona.description}
               </Text>
 
-              <View
-                style={[
-                  styles.badge,
-                  selected && styles.selectedBadge,
-                ]}
-              >
-                <Text
-                  style={[
-                    styles.badgeText,
-                    selected && styles.selectedBadgeText,
-                  ]}
-                >
-                  WEATHER
+              {isSelected && (
+                <Text style={styles.weatherMessage}>
+                  {persona.weatherMessage}
                 </Text>
-              </View>
-            </TouchableOpacity>
-          );
-        })}
-      </ScrollView>
+              )}
+            </View>
+
+            {/* ARROW */}
+            <Text
+              style={[
+                styles.arrow,
+                isSelected && styles.selectedArrow,
+              ]}
+            >
+              ›
+            </Text>
+          </TouchableOpacity>
+        );
+      })}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 8,
-    marginBottom: 10,
-  },
-
-  title: {
-    color: '#FFFFFF',
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginHorizontal: 20,
-    marginBottom: 5,
-  },
-
-  subtitle: {
-    color: '#9FB3C8',
-    fontSize: 13,
-    marginHorizontal: 20,
-    marginBottom: 14,
-  },
-
-  scrollContent: {
-    paddingHorizontal: 20,
-    paddingRight: 8,
+    marginTop: 4,
   },
 
   card: {
-    width: 175,
-    minHeight: 205,
-    backgroundColor: '#132D4D',
-    borderRadius: 18,
-    padding: 15,
-    marginRight: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+
+    marginHorizontal: 20,
+    marginBottom: 10,
+
+    padding: 13,
+
+    borderRadius: 17,
+
+    backgroundColor: '#102A47',
+
     borderWidth: 1,
-    borderColor: '#254563',
+    borderColor: '#244B69',
   },
 
   selectedCard: {
+    backgroundColor: '#123B5A',
     borderColor: '#55C2FF',
-    borderWidth: 2,
-    backgroundColor: '#173B60',
   },
 
   iconContainer: {
     width: 48,
     height: 48,
-    borderRadius: 24,
-    backgroundColor: '#1D4164',
+
+    borderRadius: 15,
+
+    backgroundColor: '#173B5D',
+
+    borderWidth: 1,
+    borderColor: '#2A5776',
+
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 12,
+
+    marginRight: 12,
   },
 
   selectedIconContainer: {
-    backgroundColor: '#24577D',
+    backgroundColor: '#1B4B6D',
+    borderColor: '#55C2FF',
   },
 
   icon: {
-    fontSize: 26,
+    fontSize: 23,
   },
 
-  name: {
-    color: '#FFFFFF',
-    fontSize: 16,
-    fontWeight: 'bold',
-    marginBottom: 7,
-  },
-
-  selectedText: {
-    color: '#55C2FF',
-  },
-
-  description: {
-    color: '#C4D5E8',
-    fontSize: 12,
-    lineHeight: 17,
+  content: {
     flex: 1,
   },
 
-  badge: {
-    alignSelf: 'flex-start',
-    backgroundColor: '#1D4164',
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 8,
-    marginTop: 10,
+  titleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+
+    marginBottom: 4,
   },
 
-  selectedBadge: {
-    backgroundColor: '#55C2FF',
-  },
+  title: {
+    color: '#FFFFFF',
 
-  badgeText: {
-    color: '#9FB3C8',
-    fontSize: 9,
+    fontSize: 15,
     fontWeight: 'bold',
   },
 
-  selectedBadgeText: {
-    color: '#08213A',
+  activeBadge: {
+    marginLeft: 8,
+
+    paddingHorizontal: 6,
+    paddingVertical: 3,
+
+    borderRadius: 6,
+
+    backgroundColor: '#164B38',
+
+    borderWidth: 1,
+    borderColor: '#2E8B68',
+  },
+
+  activeText: {
+    color: '#8BE0BD',
+
+    fontSize: 7,
+    fontWeight: 'bold',
+
+    letterSpacing: 0.7,
+  },
+
+  description: {
+    color: '#8EABC3',
+
+    fontSize: 11,
+    lineHeight: 16,
+
+    paddingRight: 5,
+  },
+
+  weatherMessage: {
+    color: '#55C2FF',
+
+    fontSize: 10,
+    lineHeight: 15,
+
+    marginTop: 7,
+
+    paddingRight: 5,
+  },
+
+  arrow: {
+    color: '#62819A',
+
+    fontSize: 27,
+    fontWeight: '300',
+
+    marginLeft: 8,
+  },
+
+  selectedArrow: {
+    color: '#55C2FF',
   },
 });
