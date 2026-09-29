@@ -1,44 +1,83 @@
 [
   {
-    "id": "fisherman",
-    "emoji": "🎣",
-    "icon": "sailing",
-    "basePath": "occupations.fisherman",
-    "detailKeys": ["seaConditionWarning", "windSpeedAlert", "safeReturnTime"]
+    "occupationId": "fisherman",
+    "displayName": "occupations.fisherman.displayName",
+    "iconKey": "sailing",
+    "fields": {
+      "headline": "occupations.fisherman.headline",
+      "seaConditionWarning": "occupations.fisherman.seaConditionWarning",
+      "windSpeedAlert": "occupations.fisherman.windSpeedAlert",
+      "safeReturnTime": "occupations.fisherman.safeReturnTime"
+    },
+    "conditionLogic": {
+      "seaConditionWarning": { "warnIfWaveHeightAboveM": 2 },
+      "windSpeedAlert": { "warnIfWindSpeedAboveKmh": 35 }
+    }
   },
   {
-    "id": "vendor",
-    "emoji": "🛒",
-    "icon": "storefront",
-    "basePath": "occupations.vendor",
-    "detailKeys": ["stockProtectionTip", "footTrafficImpact"]
+    "occupationId": "vendor",
+    "displayName": "occupations.vendor.displayName",
+    "iconKey": "storefront",
+    "fields": {
+      "headline": "occupations.vendor.headline",
+      "stockProtectionTip": "occupations.vendor.stockProtectionTip",
+      "footTrafficImpact": "occupations.vendor.footTrafficImpact"
+    },
+    "conditionLogic": {
+      "stockProtectionTip": { "warnIfRainChanceAbove": 50 }
+    }
   },
   {
-    "id": "deliveryWorker",
-    "emoji": "🛵",
-    "icon": "two-wheeler",
-    "basePath": "occupations.deliveryWorker",
-    "detailKeys": ["roadHazardWarning", "safeRouteTip"]
+    "occupationId": "deliveryWorker",
+    "displayName": "occupations.deliveryWorker.displayName",
+    "iconKey": "two_wheeler",
+    "fields": {
+      "headline": "occupations.deliveryWorker.headline",
+      "roadHazardWarning": "occupations.deliveryWorker.roadHazardWarning",
+      "safeRouteTip": "occupations.deliveryWorker.safeRouteTip"
+    },
+    "conditionLogic": {
+      "roadHazardWarning": { "warnIfRainChanceAbove": 40 }
+    }
   },
   {
-    "id": "gardener",
-    "emoji": "🌱",
-    "icon": "grass",
-    "basePath": "occupations.gardener",
-    "detailKeys": ["wateringAdvisory", "frostWarning"]
+    "occupationId": "gardener",
+    "displayName": "occupations.gardener.displayName",
+    "iconKey": "grass",
+    "fields": {
+      "headline": "occupations.gardener.headline",
+      "wateringAdvisory": "occupations.gardener.wateringAdvisory",
+      "frostWarning": "occupations.gardener.frostWarning"
+    },
+    "conditionLogic": {
+      "wateringAdvisory": { "skipIfRainChanceAbove": 60 },
+      "frostWarning": { "warnIfTempBelow": 5 }
+    }
   },
   {
-    "id": "student",
-    "emoji": "🎒",
-    "icon": "school",
-    "basePath": "occupations.student",
-    "detailKeys": ["commuteToSchoolAdvisory", "outdoorActivityWarning"]
+    "occupationId": "student",
+    "displayName": "occupations.student.displayName",
+    "iconKey": "school",
+    "fields": {
+      "headline": "occupations.student.headline",
+      "commuteToSchoolAdvisory": "occupations.student.commuteToSchoolAdvisory",
+      "outdoorActivityWarning": "occupations.student.outdoorActivityWarning"
+    },
+    "conditionLogic": {
+      "outdoorActivityWarning": { "warnIfRainChanceAbove": 50 }
+    }
   },
   {
-    "id": "tourist",
-    "emoji": "📷",
-    "icon": "camera-alt",
-    "basePath": "occupations.tourist",
-    "detailKeys": ["sightseeingAdvisory", "packingTip"]
+    "occupationId": "tourist",
+    "displayName": "occupations.tourist.displayName",
+    "iconKey": "camera_alt",
+    "fields": {
+      "headline": "occupations.tourist.headline",
+      "sightseeingAdvisory": "occupations.tourist.sightseeingAdvisory",
+      "packingTip": "occupations.tourist.packingTip"
+    },
+    "conditionLogic": {
+      "packingTip": { "suggestIfRainChanceAbove": 30 }
+    }
   }
 ]
